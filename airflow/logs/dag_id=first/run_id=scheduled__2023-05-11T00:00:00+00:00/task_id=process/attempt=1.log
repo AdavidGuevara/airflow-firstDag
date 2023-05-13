@@ -1,0 +1,14 @@
+[2023-05-12T20:15:24.887-0500] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: first.process scheduled__2023-05-11T00:00:00+00:00 [queued]>
+[2023-05-12T20:15:24.916-0500] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: first.process scheduled__2023-05-11T00:00:00+00:00 [queued]>
+[2023-05-12T20:15:24.916-0500] {taskinstance.py:1331} INFO - Starting attempt 1 of 2
+[2023-05-12T20:15:24.981-0500] {taskinstance.py:1350} INFO - Executing <Task(PythonOperator): process> on 2023-05-11 00:00:00+00:00
+[2023-05-12T20:15:24.990-0500] {standard_task_runner.py:57} INFO - Started process 8004 to run task
+[2023-05-12T20:15:25.006-0500] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'first', 'process', 'scheduled__2023-05-11T00:00:00+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/first.py', '--cfg-path', '/tmp/tmpmdlhyh30']
+[2023-05-12T20:15:25.011-0500] {standard_task_runner.py:85} INFO - Job 5: Subtask process
+[2023-05-12T20:15:25.170-0500] {task_command.py:410} INFO - Running <TaskInstance: first.process scheduled__2023-05-11T00:00:00+00:00 [running]> on host adavid-home
+[2023-05-12T20:15:25.658-0500] {taskinstance.py:1568} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='example@gmail.com' AIRFLOW_CTX_DAG_OWNER='adavid' AIRFLOW_CTX_DAG_ID='first' AIRFLOW_CTX_TASK_ID='process' AIRFLOW_CTX_EXECUTION_DATE='2023-05-11T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-05-11T00:00:00+00:00'
+[2023-05-12T20:15:25.661-0500] {first.py:23} INFO - performing processing
+[2023-05-12T20:15:25.662-0500] {python.py:183} INFO - Done. Returned value was: None
+[2023-05-12T20:15:25.684-0500] {taskinstance.py:1368} INFO - Marking task as SUCCESS. dag_id=first, task_id=process, execution_date=20230511T000000, start_date=20230513T011524, end_date=20230513T011525
+[2023-05-12T20:15:25.743-0500] {local_task_job_runner.py:232} INFO - Task exited with return code 0
+[2023-05-12T20:15:25.846-0500] {taskinstance.py:2674} INFO - 1 downstream tasks scheduled from follow-on schedule check
